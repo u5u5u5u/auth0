@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
-const Header: FC = () => {
+const Login: FC = () => {
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
@@ -23,4 +23,4 @@ const Header: FC = () => {
   );
 };
 
-export default Header;
+export default Login;

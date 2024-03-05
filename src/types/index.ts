@@ -1,14 +1,8 @@
-import {
-  MicroCMSListResponse,
-  MicroCMSImage,
-  MicroCMSListContent,
-} from "microcms-js-sdk";
+import { MicroCMSListResponse, MicroCMSListContent } from "microcms-js-sdk";
 
 //microCMSのAPIのレスポンスの型を定義
 export type Article = {
   title?: string;
-  body?: string;
-  thumbnail?: MicroCMSImage;
   private: boolean;
 };
 

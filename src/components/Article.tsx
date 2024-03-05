@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import type { ArticleListDetail } from "../types";
 
 type Props = {
@@ -7,24 +6,10 @@ type Props = {
 };
 
 const Article: FC<Props> = ({ data }) => {
-  const { thumbnail, title, body, publishedAt } = data;
+  const { title } = data;
   return (
     <main>
-      {thumbnail !== undefined && (
-        <Image
-          src={thumbnail.url}
-          width={thumbnail.width}
-          height={thumbnail.height}
-          alt=""
-        />
-      )}
       <h1>{title}</h1>
-      <p>{publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: body || "",
-        }}
-      />
     </main>
   );
 };
